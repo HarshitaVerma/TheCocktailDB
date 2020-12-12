@@ -1,0 +1,61 @@
+@import '../../../../../styles/variables.scss';
+#filter_id_main {
+  .clickable {
+    cursor: pointer;
+  }
+}
+.overflow {
+  overflow: auto;
+}
+.filterPartition {
+  border-bottom: 1px solid $color-primary;
+}
+.clear {
+  font-size: $font-size-big;
+  color: $color-primary;
+  cursor: pointer;
+}
+/* Checkbox Custom Styling*/
+.active-checkbox {
+  position: absolute;
+  opacity: 1;
+  & {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    margin: 0px;
+    width: 16px;
+    height: 16px;
+    /* margin-right: 10px; */
+  }
+  &:before {
+    content: '';
+    margin-right: 0px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 16px;
+    height: 16px;
+    background: $color-white;
+    border: 1px solid $color-primary;
+  }
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+  &:disabled:before {
+    box-shadow: none;
+    background: $color-white;
+    border: 1px solid $color-primary;
+  }
+  &:checked:after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    background: black;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 black, 4px 0 0 black, 4px -2px 0 black, 4px -4px 0 black, 4px -6px 0 black, 4px -8px 0 black;
+    transform: rotate(45deg);
+  }
+}

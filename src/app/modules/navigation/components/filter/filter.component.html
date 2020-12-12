@@ -1,0 +1,68 @@
+<div *ngIf="arrFilter" fxLayout="row" fxFill fxLayoutAlign="center center" id="filter_id_main">
+  <div fxFill fxFlex="95" fxLayout="column" fxLayoutAlign="center center">
+    <div fxFill fxFlex="80" fxLayout="column" fxFill fxLayoutAlign="center stretch">
+      <div fxFlex="10" fxLayoutAlign="start">
+        <div fxFlex="50" fxLayoutAlign="start center"><label class="fontBig">Filter</label></div>
+        <div fxFlex="50" fxLayoutAlign="end center" class="clear" (click)="clearFilter()">Clear All</div>
+      </div>
+      <p class="filterPartition"></p>
+      <div fxFlex="auto" fxLayout="column" class="overflow">
+        <div fxFlex="auto" fxLayoutAlign="start" fxLayout="column">
+          <div fxLayoutAlign="start center" class="clickable" (click)="this.show1 = !this.show1">
+            <label class="fontBig">CATEGORY </label>
+            <mat-icon *ngIf="show1">arrow_drop_up</mat-icon>
+            <mat-icon *ngIf="!show1">arrow_drop_down</mat-icon>
+          </div>
+
+          <div [hidden]="!show1">
+            <div *ngFor="let type of arrFilter[0]['drinks']" fxLayoutAlign="start">
+              <div fxFlex="10"><input type="checkbox" class="active-checkbox" [checked] (click)="selectFilter($event, type['strCategory'], 'c')" /></div>
+              <div fxFlex="90">{{ type['strCategory'] }}</div>
+            </div>
+          </div>
+        </div>
+        <div fxFlex="auto" fxLayoutAlign="start" fxLayout="column">
+          <div fxLayoutAlign="start center" class="clickable" (click)="this.show2 = !this.show2">
+            <label class="fontBig">GLASS </label> <mat-icon *ngIf="show2">arrow_drop_up</mat-icon>
+            <mat-icon *ngIf="!show2">arrow_drop_down</mat-icon>
+          </div>
+          <div [hidden]="!show2">
+            <div *ngFor="let type of arrFilter[1]['drinks']" fxLayoutAlign="start">
+              <div fxFlex="10"><input type="checkbox" class="active-checkbox" [checked] (click)="selectFilter($event, type['strGlass'], 'g')" /></div>
+              <div fxFlex="90">{{ type['strGlass'] }}</div>
+            </div>
+          </div>
+        </div>
+        <div fxFlex="auto" fxLayoutAlign="start" fxLayout="column">
+          <div fxLayoutAlign="start center" class="clickable" (click)="this.show3 = !this.show3">
+            <label class="fontBig">INGREDIENT </label> <mat-icon *ngIf="show3">arrow_drop_up</mat-icon>
+            <mat-icon *ngIf="!show3">arrow_drop_down</mat-icon>
+          </div>
+          <div [hidden]="!show3">
+            <div *ngFor="let type of arrFilter[2]['drinks']" fxLayoutAlign="start">
+              <div fxFlex="10"><input type="checkbox" class="active-checkbox" [checked] (click)="selectFilter($event, type['strIngredient1'], 'i')" /></div>
+              <div fxFlex="90">{{ type['strIngredient1'] }}</div>
+            </div>
+          </div>
+        </div>
+        <div fxFlex="auto" fxLayoutAlign="start" fxLayout="column">
+          <div fxLayoutAlign="start center" class="clickable" (click)="this.show4 = !this.show4">
+            <label class="fontBig">ALCOHOL </label> <mat-icon *ngIf="show4">arrow_drop_up</mat-icon>
+            <mat-icon *ngIf="!show4">arrow_drop_down</mat-icon>
+          </div>
+          <div [hidden]="!show4">
+            <div *ngFor="let type of arrFilter[3]['drinks']" fxLayoutAlign="start">
+              <div fxFlex="10"><input type="checkbox" class="active-checkbox" [checked] (click)="selectFilter($event, type['strAlcoholic'], 'a')" /></div>
+              <div fxFlex="90">{{ type['strAlcoholic'] }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="filterPartition"></p>
+    </div>
+    <div fxFlex="15" fxFill fxLayoutAlign="center stretch">
+      <div fxFlex="20" fxLayoutAlign="center center" class="orngBtn" mat-dialog-close>Close</div>
+      <div fxFlex="20" fxLayoutAlign="center center" class="orngBtn" (click)="applyFilter()">Apply</div>
+    </div>
+  </div>
+</div>

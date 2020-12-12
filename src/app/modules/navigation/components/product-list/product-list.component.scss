@@ -1,0 +1,42 @@
+@import '../../../../../styles/variables.scss';
+#productMain {
+  overflow-x: auto;
+  min-height: 85vh;
+  .cardPartition {
+    margin: 10px;
+  }
+  .productName {
+    color: $color-font-primary;
+    font-size: $font-size-big;
+  }
+  mat-card {
+    height: 400px;
+    cursor: pointer;
+    //width: 337px;
+    //background: rgb(253, 111, 29);
+    //background: linear-gradient(90deg, rgba(253, 111, 29, 1) 50%, rgba(251, 252, 69, 1) 100%);
+  }
+  .sortDiv {
+    border: 1px solid $color-primary;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 10px;
+    min-width: 90px;
+    label {
+      font-weight: 600;
+    }
+  }
+  .btnFilter {
+    background-color: $color-primary;
+    color: $color-white;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 10px;
+    min-width: 90px;
+  }
+  img {
+    height: 300px;
+    width: 300px;
+  }
+}

@@ -1,0 +1,19 @@
+<div fxFill fxLayout="column" fxLayoutAlign="stretch stretch">
+  <div fxFlex="95" fxFill fxLayout="row" fxFill fxLayoutAlign="center center">
+    <div fxFill fxFlex="65" fxLayout="row" fxLayoutAlign="start stretch">
+      <mat-card fxFill fxLayout="row" fxLayoutAlign="center center">
+        <div fxFlex="40" fxLayout="column" fxFill fxLayoutAlign="center center">
+          <div fxFlex="98" fxFill fxLayout="row" fxLayoutAlign="center center">
+            <div *ngIf="itm" fxFlex="98" fxFill fxLayoutAlign="start stretch" fxLayout="column" fxLayoutGap="10px">
+              <div fxFlex="60" fxLayoutAlign="center center">{{ itm.strDrink }}</div>
+              <img fxFlex="60" fxLayoutAlign="center center" [src]="getSantizeUrl(itm.strDrinkThumb)" />
+            </div>
+          </div>
+        </div>
+        <div fxFlex="60" fxLayout="column" fxFill fxLayoutAlign="center center">
+          <div fxFlex="98" fxFill fxLayout="row" fxLayoutAlign="center center"></div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

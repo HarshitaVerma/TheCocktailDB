@@ -1,0 +1,24 @@
+<nav id="navbar" class="navbar navbar-default active">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" id="menubtn" class="navbar-toggle collapsed" aria-expanded="false" (click)="showMenu()">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/home" routerLinkActive="router-link-active">
+        <img class="navbar-logo-img" src="../assets/images/logo.png" />
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right text-right ">
+        <li><a routerLink="/home" routerLinkActive="router-link-active"> Home</a></li>
+        <li><a routerLink="/cocktailList" routerLinkActive="router-link-active"> Cocktail List</a></li>
+        <li><a routerLink="/cart" routerLinkActive="router-link-active"> Cart</a></li>
+        <li>
+          <a routerLink="/search" routerLinkActive="router-link-active"> <mat-icon>search</mat-icon></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

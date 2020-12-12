@@ -1,0 +1,29 @@
+<div id="productMain" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="start stretch">
+  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <div fxFlex="40" class="sortDiv" fxLayout.xs="column" fxLayout="row">
+      <div fxFlex="30" fxLayoutAlign="start center"><label> Sort By:</label></div>
+      <div fxFlex="30" fxLayoutAlign="start center ">Popularity</div>
+      <div fxFlex="30" fxLayoutAlign="start center ">Latest</div>
+      <div fxFlex="30" fxLayoutAlign="start center ">Random</div>
+    </div>
+    <div fxFlex="10" fxLayoutAlign="center center" class="btnFilter" (click)="filterComponent()"><mat-icon>filter</mat-icon> Filter</div>
+  </div>
+  <div fxLayout="column" fxFlex="78" fxLayoutAlign="start stretch" fxLayoutGap="10px">
+    <div fxFlex="97" fxLayout="column" fxLayoutAlign="start">
+      <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center">
+        <div *ngFor="let item of arrDrinks" class="cardPartition">
+          <mat-card (click)="productDetails(item)">
+            <div fxLayout="column" fxFill fxLayoutAlign="center center">
+              <div fxFlex="90" class="productImg">
+                <img src="{{ item.strDrinkThumb }}" />
+              </div>
+              <div fxFlex="10" fxFill fxLayoutAlign="center center" class="productName">
+                <strong>{{ item.strDrink }}</strong>
+              </div>
+            </div></mat-card
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

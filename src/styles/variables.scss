@@ -1,0 +1,36 @@
+/* Font styles*/
+$font-family: 'open-sans';
+$font-family-bold: 'Roboto, Bold';
+$font-family-bold-italic: 'Roboto,Italic';
+
+/* Font size*/
+$font-size-big: 16px;
+$font-size-medium: 14px;
+$font-size-small: 12px;
+$font-size-xl: 18px;
+
+/* Colors*/
+$color-font-primary: black;
+$color-primary: #f58c13;
+$color-dark-blue: #252934;
+$color-white: white;
+$color-yellow: #f58c13;
+$color-error: #ff0000;
+$color-light-gray: lightgray;
+$color-bg-grey: #f1f3f6;
+$color-warning: #ffde00;
+$color-success: #0f4918;
+$color-btn-orange: #fb641b;
+$color-txt-grey: grey;
+$color-txt-green: #388e3c;
+/* Padding*/
+$size-small: 5px;
+$size-medium: 10px;
+$size-big: 20px;
+
+/* Height*/
+$navigation-height: 40px;
+
+/* Borders*/
+$border-bottom-bold: 2px solid $color-light-gray;
+$border-bottom: 1px solid $color-light-gray;
