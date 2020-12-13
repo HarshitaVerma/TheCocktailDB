@@ -15,13 +15,13 @@ export class FilterComponent implements OnInit {
   show2: boolean = false;
   show3: boolean = false;
   show4: boolean = false;
-  constructor(public navServ: NavigationService, public dialog: MatDialogRef<FilterComponent>) {}
-
-  ngOnInit(): void {
+  constructor(public navServ: NavigationService, public dialog: MatDialogRef<FilterComponent>) {
     this.navServ.getAllFilters().subscribe(resp => {
       this.arrFilter = resp;
     });
   }
+
+  ngOnInit(): void {}
   applyFilter() {
     this.dialog.close(this.selectedFilter);
     console.log(this.selectedFilter);

@@ -1,17 +1,39 @@
-<div fxFill fxLayout="column" fxLayoutAlign="stretch stretch">
+<div fxLayout="column" fxLayoutAlign="stretch stretch" class="containerHeight" id="id_product_details">
   <div fxFlex="95" fxFill fxLayout="row" fxFill fxLayoutAlign="center center">
-    <div fxFill fxFlex="65" fxLayout="row" fxLayoutAlign="start stretch">
-      <mat-card fxFill fxLayout="row" fxLayoutAlign="center center">
+    <div fxFill fxFlex="65" fxLayout="row" fxLayoutAlign="start">
+      <mat-card fxFill fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center">
         <div fxFlex="40" fxLayout="column" fxFill fxLayoutAlign="center center">
           <div fxFlex="98" fxFill fxLayout="row" fxLayoutAlign="center center">
             <div *ngIf="itm" fxFlex="98" fxFill fxLayoutAlign="start stretch" fxLayout="column" fxLayoutGap="10px">
-              <div fxFlex="60" fxLayoutAlign="center center">{{ itm.strDrink }}</div>
               <img fxFlex="60" fxLayoutAlign="center center" [src]="getSantizeUrl(itm.strDrinkThumb)" />
             </div>
           </div>
         </div>
         <div fxFlex="60" fxLayout="column" fxFill fxLayoutAlign="center center">
-          <div fxFlex="98" fxFill fxLayout="row" fxLayoutAlign="center center"></div>
+          <div fxFlex="98" fxFill fxLayout="row" fxLayoutAlign="center center">
+            <div *ngIf="itm" fxFlex="98" fxFill fxLayoutAlign="start stretch" fxLayout="column" fxLayoutGap="10px">
+              <div fxFlex="60" fxLayoutAlign="start center">
+                <div fxFlex="50"><label>Name:</label></div>
+                <div fxFlex="50">{{ itm.strDrink }}</div>
+              </div>
+              <div fxFlex="60" fxLayoutAlign="start center">
+                <div fxFlex="50"><label>Category:</label></div>
+                <div fxFlex="50">{{ itm.strCategory }}</div>
+              </div>
+              <div fxFlex="60" fxLayoutAlign="start center">
+                <div fxFlex="50"><label>Instructions:</label></div>
+                <div fxFlex="50">{{ itm.strInstructions }}</div>
+              </div>
+              <div fxFlex="60" fxLayoutAlign="start center">
+                <div fxFlex="50"><label>Ingredient</label></div>
+                <div fxFlex="50">{{ itm.strIngredient1 }}, {{ itm.strIngredient2 }}, {{ itm.strIngredient3 }}</div>
+              </div>
+              <div fxFlex="60" fxLayoutAlign="start center">
+                <div fxFlex="50"><label>Date Modified: </label></div>
+                <div fxFlex="50">{{ itm.dateModified }}</div>
+              </div>
+            </div>
+          </div>
         </div>
       </mat-card>
     </div>

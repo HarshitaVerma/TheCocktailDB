@@ -12,8 +12,6 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class ProductListComponent implements OnInit {
   arrDrinks;
-  arrAll = [];
-  searchText = '';
   constructor(public router: Router, public navSer: NavigationService, public dialog: MatDialog) {
     this.getProductList();
   }
@@ -40,9 +38,6 @@ export class ProductListComponent implements OnInit {
             tempArr.forEach(thrd => {
               this.arrDrinks.push(thrd);
             });
-            console.log('filtdata', filtdata);
-            console.log('tempArr', tempArr);
-            console.log('arrDrinks', this.arrDrinks);
           }
         });
       } else {
